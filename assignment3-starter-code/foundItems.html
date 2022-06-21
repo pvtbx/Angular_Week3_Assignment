@@ -1,0 +1,12 @@
+<br>
+<div>
+    <ol>
+        <li ng-repeat="item in list.foundItems">
+            <h2>{{item.name}}</h2>
+            <h3>{{item.short_name}}</h3>
+            <p>{{item.description}}</p>
+            <input type="button" ng-click="list.onRemove({index: $index})"  value="Remove item!">
+        </li>
+    </ol>
+</div>
+<div class="alert"ng-show="list.onEmpty">{{list.onEmpty}}</div>
